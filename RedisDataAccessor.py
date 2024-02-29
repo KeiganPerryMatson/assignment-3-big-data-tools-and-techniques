@@ -62,7 +62,7 @@ class RedisDataAccessor:
             formatted_key = f"track:{updated_key}"
 
             # Store the key / track pair in the Redis database
-            self.__redis_connection.json().set(formatted_key, Path.root_path(), track)
+            self.__redis_connection.json().set(formatted_key, Path.root_path(), json.dumps(track))
 
             # Increment the key index
             updated_key = updated_key + 1
@@ -84,11 +84,14 @@ class RedisDataAccessor:
         RETURNS: track - the track retrieved from the Redis database for the given key
         """
 
-        # Retrieve the track from the Redis database
+        # Retrieve the track data from the Redis database
         track = self.__redis_connection.json().get(key)
 
-        # Return the retrieved track
-        return track
+        # Decode the data from JSON
+        track_data = json.loads(track)
+
+        # Return the retrieved track data
+        return track_data
     
     def populateDataFrame(self):
 
