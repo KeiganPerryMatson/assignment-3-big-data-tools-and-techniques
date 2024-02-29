@@ -98,7 +98,7 @@ class SpotifyDataAccessor:
 
         ARGS:
             self - the class object
-             type - type of query requested (artist, album, or track)
+            type - type of query requested (artist, album, or track)
 
         RETURNS: legality_check - boolean flag (True = pass, False = fail)
         """
@@ -109,7 +109,7 @@ class SpotifyDataAccessor:
         # If a proper type was not given...
         if ((type != "album") and (type != "artist") and (type != "track")):
 
-            # Set the flag to false to trigger exiting the calling function.
+            # Set the flag to false to trigger exiting the calling function
             legality_check = False
         
         # Return the result of the type legality check
@@ -146,13 +146,13 @@ class SpotifyDataAccessor:
         # Call getAuthorizationHeader() to get the headers necessary for the GET request to the above URL
         headers = self.getAuthorizationHeader(access_token)
 
-        # Define the query that the Spotify API will use to get a specified artist's ID (will always grab the most popular artist match)
+        # Define the query that the Spotify API will use to get a specified item's ID (will always grab the most popular item match)
         query = f"?q={name}&type={type}&limit=1"
 
         # Combine the URL and the query into in Spotify's expected format
         query_url = url + query
 
-        # Send a GET request to the Spotify API to receive an artist id (returned in JSON format / stored in request.content)
+        # Send a GET request to the Spotify API to receive an item id (returned in JSON format / stored in request.content)
         request = get(query_url, headers = headers)
 
         # Convert received JSON data into a Python dictionary by using json.loads (load from string)
@@ -161,7 +161,7 @@ class SpotifyDataAccessor:
         # If the GET request returned nothing...
         if len(json_request) == 0:
 
-            # Spotify could not find an item with this name. Output an error message and exit the function.
+            # Spotify could not find an item with this name. Output an error message and exit the function
             print("ERROR: No item with this name exists...")
 
             return None
@@ -200,7 +200,7 @@ class SpotifyDataAccessor:
         # If no items were retrieved for this artist...
         if (artist == None):
 
-            # Spotify could not find an artist with this name. Output an error message and exit the function.
+            # Spotify could not find an artist with this name. Output an error message and exit the function
             print("ERROR: Could not retrieve top tracks for this artist...")
 
             return None
@@ -208,7 +208,7 @@ class SpotifyDataAccessor:
         # Retrieve the artist's ID from the artist Python dictionary
         artist_id = artist["id"]
         
-        # Define the URL to request a Spotify ID from, using the artist_id retrieved from getSpotifyData()
+        # Define the URL to request the artist's top 10 tracks from, using the artist_id retrieved from getSpotifyData()
         url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=US"
 
         # Call getAuthorizationHeader() to get the headers necessary for the GET request to the above URL
