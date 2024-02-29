@@ -95,12 +95,11 @@ class RedisDataAccessor:
         """
         FUNCTION ABSTRACT: populateDataFrame()
 
-        DESCRIPTION: This function inserts data retrieved from the Redis database into a passed-in Pandas dataframe.
+        DESCRIPTION: This function returns data retrieved from the Redis database as a dataframe object.
 
         ARGS: self - the class object
 
-        RETURNS:
-            populated_dataframe - a dataframe containing all of the records from the Redis database
+        RETURNS: populated_dataframe - a dataframe containing all of the records from the Redis database
         """
 
         # Define an empty list to pack with each Redis database item
