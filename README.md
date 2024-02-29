@@ -1,4 +1,4 @@
-# assignment-3-big-data
+# assignment-3-big-data-tools-and-techniques
 Create a python application that:
 
 - Reads JSON from API
