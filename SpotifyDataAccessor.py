@@ -120,8 +120,9 @@ class SpotifyDataAccessor:
         """
         FUNCTION ABSTRACT: getSpotifyData()
 
-        DESCRIPTION: This function queries the Spotify API with a provided name of an artist, album, or track
-                     to retrieve the data associated with the item.
+        DESCRIPTION:
+            This function queries the Spotify API with a provided name of an artist, album, or track
+            to retrieve the data associated with the item.
 
         ARGS:
             self - the class object
@@ -174,8 +175,9 @@ class SpotifyDataAccessor:
         """
         FUNCTION ABSTRACT: getTopTracksForArtist()
 
-        DESCRIPTION: This function queries the Spotify API with a provided artist's name and retrieves their
-                     top 10 most popular tracks.
+        DESCRIPTION:
+            This function queries the Spotify API with a provided artist's name and retrieves their
+            top 10 most popular tracks.
 
         ARGS:
             self - the class object
@@ -203,7 +205,7 @@ class SpotifyDataAccessor:
             # Spotify could not find an artist with this name. Output an error message and exit the function
             print("ERROR: Could not retrieve top tracks for this artist...")
 
-            return None
+            return NoneS
         
         # Retrieve the artist's ID from the artist Python dictionary
         artist_id = artist["id"]

@@ -41,8 +41,7 @@ class RedisDataAccessor:
         """
         FUNCTION ABSTRACT: storeTracks()
 
-        DESCRIPTION: This function uses the Redis database connection to store a Python dictionary
-                     of tracks.
+        DESCRIPTION: This function uses the Redis database connection to store a Python dictionary of tracks.
 
         ARGS:
             self - the class object

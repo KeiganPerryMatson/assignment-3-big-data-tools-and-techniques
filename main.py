@@ -90,10 +90,10 @@ duration_dataframe = track_dataframe[["Duration (ms)", "Popularity"]].copy()
 
 # Plot a line graph for duration vs. popularity to see if track length has a correlation with popularity
 (seaborn_objects.Plot(data = duration_dataframe, x = "Popularity", y = "Duration (ms)")
-                      .add(seaborn_objects.Dot(alpha = 0.5, color = red))
-                      .add(seaborn_objects.Line(color = red, linewidth = 3), seaborn_objects.PolyFit(order = 1))
-                      .label(x = "Popularity (0 - 100)", y = "Duration (ms)")
-                      .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
+                    .add(seaborn_objects.Dot(alpha = 0.5, color = red))
+                    .add(seaborn_objects.Line(color = red, linewidth = 3), seaborn_objects.PolyFit(order = 1))
+                    .label(x = "Popularity (0 - 100)", y = "Duration (ms)")
+                    .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
 
 # This dataset seems to show that tracks around the 250,000 ms duration (about 4 minutes) tend to be more popular
 
@@ -106,10 +106,10 @@ explicit_dataframe = track_dataframe[["Explicit", "Popularity"]].copy()
 
 # Plot a line graph for explicit vs. popularity to see if explicit language has a correlation with popularity
 (seaborn_objects.Plot(data = explicit_dataframe, x = "Popularity", y = "Explicit")
-                      .add(seaborn_objects.Dot(alpha = 0.5, color = red))
-                      .add(seaborn_objects.Line(color = red, linewidth = 3), seaborn_objects.PolyFit(order = 1))
-                      .label(x = "Popularity (0 - 100)", y = "Explicit (true / false)")
-                      .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
+                    .add(seaborn_objects.Dot(alpha = 0.5, color = red))
+                    .add(seaborn_objects.Line(color = red, linewidth = 3), seaborn_objects.PolyFit(order = 1))
+                    .label(x = "Popularity (0 - 100)", y = "Explicit (true / false)")
+                    .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
 
 # This dataset seems to show that tracks without explicit language tend to be more popular
 
@@ -122,9 +122,9 @@ artist_dataframe = track_dataframe[["Artist Name", "Popularity"]].copy()
 
 # Plot a dot plot graph to see which artist has higher popularity
 (seaborn_objects.Plot(data = artist_dataframe, x = 'Artist Name', y = 'Popularity')
-                      .add(seaborn_objects.Dot(alpha = 0.5, color = red))
-                      .label(x = 'Artist Name', y = 'Popularity (0 - 100)')
-                      .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
+                    .add(seaborn_objects.Dot(alpha = 0.5, color = red))
+                    .label(x = 'Artist Name', y = 'Popularity (0 - 100)')
+                    .theme({**seaborn.axes_style("whitegrid"), "grid.linestyle": ":"})).show()
 
 # This dataset seems to show that for the 10 selected artists:
 #     - Black Sabbath and KISS generally had the lowest popularity
