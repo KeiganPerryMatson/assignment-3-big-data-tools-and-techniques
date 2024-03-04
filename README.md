@@ -2,27 +2,27 @@
 
 ## Prompt
 
-Create a python application that:
+Create a Python application that:
 
-- Reads JSON from API
-- Inserts into RedisJSON
-- Does some processing (3 outputs) such as (matplotlib charts, aggregation, search, etc)
+- Reads JSON from an API
+- Inserts into a RedisJSON database
+- Does some processing (3 outputs) such as matplotlib charts, aggregation, search, etc.
 
-The python application should be:
+The Python application should be:
 
-- Using python classes (not plain scripting as shown in lecture notes)
-- Should contain necessary docstring
+- Using Python classes (not plain scripting as shown in lecture notes)
+- Should contain necessary docstrings
 - Should be aligned properly
-- Code should be pushed to GitHUB public repo (not uploaded)
+- Code should be pushed to a GitHub public repository (not uploaded)
 
 Submit the following:
 
-- GitHUB URL
+- GitHub URL
 - Capture input / output as screenshots (should be clearly visible), add it to Google Doc, and share the URL
 
-Follow the URL guidelines (clickable, shared, and no email notification)
+Follow the URL guidelines (clickable, shared, and no email notification).
 
-Just a friendly heads-up: for EACH little slip-up, like python classes, missing docstrings, uploading manually to GitHUB, messy code alignment, URL guidelines, you'll lose 5 points.
+Just a friendly heads-up: for EACH little slip-up, like Python classes, missing docstrings, uploading manually to GitHub, messy code alignment, URL guidelines, you'll lose 5 points.
 
 ## Execution
 
@@ -37,4 +37,4 @@ In order to run this code, please do the following:
 - Rename the config.yaml_template file to config.yaml and the .env_template file to .env
 - For the config.yaml file, you will need to substitute in details from your personal Redis database. You can retrieve these details by creating a Redis database at https://app.redislabs.com
 - For the .env file, you will need to substitute in a client ID key and client secret key from Spotify. You can retrieve these keys by creating an app at https://developer.spotify.com
-- Run the application by navigating into the newly generated directory and running python3 ./main.py
+- Run the application by navigating into the newly generated directory and running python ./main.py
