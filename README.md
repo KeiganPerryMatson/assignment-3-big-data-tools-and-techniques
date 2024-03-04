@@ -32,7 +32,7 @@ For this assignment, I decided to use the Spotify for Developers API to query fo
 
 In order to run this code, please do the following:
 
-- Clone this GitHUB repository locally by running the following in a command prompt window: git clone https://github.com/KeiganPerryMatson/assignment-3-big-data-tools-and-techniques.git
+- Clone this GitHub repository locally by running the following in a command prompt window: git clone https://github.com/KeiganPerryMatson/assignment-3-big-data-tools-and-techniques.git
 - Ensure that you have the following Python libraries installed on your local machine: python-dotenv, os, pandas, matplotlib, seaborn, base64, requests, json, redis
 - Rename the config.yaml_template file to config.yaml and the .env_template file to .env
 - For the config.yaml file, you will need to substitute in details from your personal Redis database. You can retrieve these details by creating a Redis database at https://app.redislabs.com
