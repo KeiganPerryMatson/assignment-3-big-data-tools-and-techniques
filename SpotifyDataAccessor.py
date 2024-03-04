@@ -205,7 +205,7 @@ class SpotifyDataAccessor:
             # Spotify could not find an artist with this name. Output an error message and exit the function
             print("ERROR: Could not retrieve top tracks for this artist...")
 
-            return NoneS
+            return None
         
         # Retrieve the artist's ID from the artist Python dictionary
         artist_id = artist["id"]
